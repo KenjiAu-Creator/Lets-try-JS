@@ -124,3 +124,14 @@ Its fourth index includes the value: ${myArray[4]}
     */
    console.log(`This iteration of our for loop's value is ${myForIterator}`);
  }
+
+ /**
+  * Functions in JavaScript
+  */
+
+  function myAdditionFunction ( num1 = 0, num2 = 0 ) 
+  {
+    return Number(num1) + Number(num2);
+  }
+  const add2And4 = myAdditionFunction(2,4);
+  console.log(add2And4);
