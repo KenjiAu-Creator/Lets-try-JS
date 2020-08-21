@@ -169,5 +169,21 @@ Its fourth index includes the value: ${myArray[4]}
     * JavaScript Objects
     */
 
-    const myObject = {};
-    
+    const myPersonInfoArray = [
+      "Henry",
+      38,
+      ["Skydiving", "Programming", "Mountain Climbing"]
+    ];
+
+    console.log( "Person as an array:");
+    console.log(myPersonInfoArray);
+    console.log( `Name is: ${myPersonInfoArray[0]}`);
+
+    const myObject = {
+      name: "Henry",
+      age: 38,
+      hobbies: ["Skydiving", "Programming", "Mountain Climbing"]
+    };
+    console.log( "Person as an object:");
+    console.log(myObject);
+    console.log( `Name is: ${myObject.name}. Age is: ${myObject.age}`);
