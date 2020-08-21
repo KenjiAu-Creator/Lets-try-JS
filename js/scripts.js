@@ -104,3 +104,23 @@ Its fourth index includes the value: ${myArray[4]}
   console.log( myWhileIterator);
   myWhileIterator --;
  }
+
+ console.log("FOR OF LOOP PRACTICE:\n");
+ const myForArray = ["Wal-Mart", "Best-Buy", "SuperStore", "SafeWay"];
+ for ( const arrayItem of myForArray)
+ {  // for ... of loop works as a for each array.
+    /** We don't need to set a termination condition. We also get a great way for accessing the value 
+     * form each iteration, based on the name we specify before the "of" keyword
+     */
+    console.log( `This array item in our loop contains: ${arrayItem}`);
+ }
+
+ console.log("FOR LOOP PRACTICE:\n");
+ for ( let myForIterator = -5; myForIterator < 30; myForIterator += 10 )
+ {
+   /**
+    * for loops have 3 parts:
+    * ASSIGNMENT; EXIT CONDITION (LOOP RUNS WHILE TRUE); ITERATION
+    */
+   console.log(`This iteration of our for loop's value is ${myForIterator}`);
+ }
