@@ -135,3 +135,39 @@ Its fourth index includes the value: ${myArray[4]}
   }
   const add2And4 = myAdditionFunction(2,4);
   console.log(add2And4);
+
+  // Fat-arrow function syntacx as an alternative.
+  /**
+   * 1) const / let for our declaration...
+   * 2) the name of our function.
+   * 3) assignment operator...
+   * 4) Parenthesis "()" with any parameters inside.
+   * 5) "fat arrow" marking the beginning of function logic.
+   * 6) Two options:
+   *    i)  What follows the fat arrow will simply be returned from the function.
+   *    ii) We can use curly braces to manage larger instruction sets, which will give us more control over 
+   *        when / how we return from the function
+   * NOTE: The "this" keyword is not overwritten when using fat arrow functions,
+   *       like it would be with a traditional funciton.
+   * NOTE: When we set up a fuinction using an assignment, it is not "hoisted"
+   *       You cannot call upon it before its delcaration. Traditional fuinctions are hoisted 
+   *       and can be access anywhere in the program if in accessible scope.
+   */
+
+   const myDivisionFunction = ( num1, num2 ) => num1 / num2; // See 6.1
+
+   const myMultiplyFunction = ( num1 = 0, num2 = 0) => {     // See: 6.ii
+     const product = num1 * num2;
+     return product; 
+   };
+
+   console.log("myAdd(5,5): " + myAdditionFunction(5,5));  // 10
+   console.log("myDivision(8,2): " + myDivisionFunction(8,2));  // 4
+   console.log("myMultiply(3,5): " + myMultiplyFunction(3,5));  // 15
+
+   /**
+    * JavaScript Objects
+    */
+
+    const myObject = {};
+    
