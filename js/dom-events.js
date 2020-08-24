@@ -62,9 +62,18 @@ console.log(secondSpan);
   console.log(firstSpan.classList)
   hoverButton.addEventListener( 'mouseenter', () => {
     console.log( 'The mouse has entered the button!');
+    // Add our class to the list for this element.
     firstSpan.classList.add('salmon-text'); 
     console.log(firstSpan.classList)
   } );
   hoverButton.addEventListener( 'mouseleave', () => {
     console.log( 'The mouse has left the button!');
+    // Remove our class from the list for this element.
+    firstSpan.classList.remove('salmon-text'); 
+    console.log(firstSpan.classList)
+  } );
+
+  // Lets listen for a click on the button element
+  clickButton.addEventListener( "click", () => {
+    console.log("The 'clicked' button was clicked");
   } );
