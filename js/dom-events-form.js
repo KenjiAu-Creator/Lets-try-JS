@@ -23,8 +23,12 @@ console.log(helloList);
  * activated.
  */
  helloForm.addEventListener('submit', ( event ) => {
-   event.preventDefault();  // Stop the form from submitting!!
-                            // We don't want a new page load!
-  console.log(event); // The full event object
+   event.preventDefault();   // Stop the form from submitting!!
+                             // We don't want a new page load!
+  console.log(event);        // The full event object
   console.log(event.target); // Gets the element that the event occurred on.
+
+  // How do we get our "value" from our form field?
+  const name = nameField.value;
+  console.log(name);
  } );
