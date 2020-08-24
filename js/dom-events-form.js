@@ -45,5 +45,6 @@ console.log(helloList);
 
   // How do I add the LI element to the page (or, our list?)
   helloList.appendChild( newLI ); // append the LI element as a child to the helloList
-  // It is possible to move the element again by targeting it as a variable and moving it with methods! 
+  // It is possible to move the element again by targeting it as a variable and moving it with methods!
+  // It is not a copy but a move rather! 
 } );
