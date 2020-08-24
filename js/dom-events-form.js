@@ -47,4 +47,8 @@ console.log(helloList);
   helloList.appendChild( newLI ); // append the LI element as a child to the helloList
   // It is possible to move the element again by targeting it as a variable and moving it with methods!
   // It is not a copy but a move rather! 
+
+    // How do I make a new LI element using innerHTML?
+    // This method is faster but can be tricky
+    helloList.innerHTML += `<li>Hello, ${name}! (innerHTML Version!)</li>`;
 } );
