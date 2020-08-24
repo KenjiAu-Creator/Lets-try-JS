@@ -34,12 +34,15 @@ console.log(helloList);
 
   // How do I make a new LI element?
   const newLI = document.createElement( "LI" ); // We want a <li>
+  const newCheckBox = document.createElement( `INPUT` );
+  newCheckBox.type = "checkbox";
   console.log(newLI); // Notice it is not in the page yet!
   // *** When we create an element, it is not automatically added. We have to tell it
   //  where and when to enter the webpage
 
   // How do I insert a value/text into the LI element?
   newLI.textContent = `Hello, ${name}!`;
+  newLI.prepend( newCheckBox );
   console.log(newLI.textContent); // Test that it was successfully assigned.
   console.log(newLI); // Alternatively just look at the whole object and look at the field.
 
