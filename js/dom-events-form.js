@@ -31,4 +31,18 @@ console.log(helloList);
   // How do we get our "value" from our form field?
   const name = nameField.value;
   console.log(name);
+
+  // How do I make a new LI element?
+  const newLI = document.createElement( "LI" ); // We want a <li>
+  console.log(newLI); // Notice it is not in the page yet!
+  // *** When we create an element, it is not automatically added. We have to tell it
+  //  where and when to enter the webpage
+
+  // How do I insert a value/text into the LI element?
+  newLI.textContent = `Hello, ${name}!`;
+  console.log(newLI.textContent); // Test that it was successfully assigned.
+  console.log(newLI); // Alternatively just look at the whole object and look at the field.
+
+  // How do I add the LI element to the page (or, our list?)
+  helloList.appendChild( newLI ); // append the LI element as a child to the helloList
  } );
