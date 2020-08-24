@@ -40,7 +40,7 @@ console.log(secondSpan);
  console.log("Outputted string into our <h2> element!");
 
  // We are replacing the existing CSS String.
- myH2.className = 'salmon-colored-text';
+ myH2.className = 'salmon-text';
  console.log( 'Change the H2 font color to "salmon"');
 
  /**
@@ -59,8 +59,11 @@ console.log(secondSpan);
    * addEventListener( 'Interaction', Parameters => logic)
    * You must have parameters even if empty ones! 
    */
+  console.log(firstSpan.classList)
   hoverButton.addEventListener( 'mouseenter', () => {
     console.log( 'The mouse has entered the button!');
+    firstSpan.classList.add('salmon-text'); 
+    console.log(firstSpan.classList)
   } );
   hoverButton.addEventListener( 'mouseleave', () => {
     console.log( 'The mouse has left the button!');
