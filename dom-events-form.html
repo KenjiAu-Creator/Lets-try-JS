@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DOM / Events / Form</title>
+    <!-- Styles -->
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+
+    <!-- Scripts -->
+    <script src="js/dom-events-form.js" type="text/JavaScript" defer></script>
+    <!-- Defer will wait to execute the script until after the page is loaded -->
+</head>
+<body>
+  <h1>DOM / Events / Form</h1>
+  <nav>
+    <h2>JavaScript Practice Nav</h2>
+    <ul>
+      <li>
+        <a href="index.html">Home</a>
+      </li>
+      <li>
+        <a href="dom-events.html">JS DOM and Events</a>
+      </li>
+      <li>
+        <a href="dom-events-form.html">JS DOM Events Form</a>
+      </li>
+    </ul>
+  </nav>
+  <!-- We are using JS to stop the traditional form input and read what the user wants to submit in this example -->
+  <form action="#">
+    <label for="your-name">
+      Your Name
+    </label>
+    <input type="text" id="your-name" value="">
+    <input type="submit" value="Say Hello">
+  </form>
+  <ul id="hello-list">
+  </ul>
+</body>
+</html>
