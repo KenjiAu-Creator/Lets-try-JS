@@ -6,6 +6,7 @@
                             * included in width instead of addition too. */
 }
 
-.salmon-coloured-text {
+.salmon-colored-text {
   color: salmon;
+  background-color: red;
 }

@@ -40,5 +40,28 @@ console.log(secondSpan);
  console.log("Outputted string into our <h2> element!");
 
  // We are replacing the existing CSS String.
- myH2.className = "salmon-coloured-text";
- console.log( ' Change the H2 font color to "salmon"');
+ myH2.className = 'salmon-colored-text';
+ console.log( 'Change the H2 font color to "salmon"');
+
+ /**
+  * We can add "listeners" to elements... they "listen" to user actions.
+  * When a user action is detected, we can have our JS follow a set of instructions.
+  */
+
+  // We can add Event listeners to HTML Element objects.
+  /** 
+   * There are two arguments to the addEventListener method:
+   *  1) The type of event (by name)
+   *  2) The instructions (what should run when the event occurs).
+   * 
+   *     (This means a function)
+   * 
+   * addEventListener( 'Interaction', Parameters => logic)
+   * You must have parameters even if empty ones! 
+   */
+  hoverButton.addEventListener( 'mouseenter', () => {
+    console.log( 'The mouse has entered the button!');
+  } );
+  hoverButton.addEventListener( 'mouseleave', () => {
+    console.log( 'The mouse has left the button!');
+  } );
