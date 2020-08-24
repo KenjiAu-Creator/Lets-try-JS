@@ -76,4 +76,12 @@ console.log(secondSpan);
   // Lets listen for a click on the button element
   clickButton.addEventListener( "click", () => {
     console.log("The 'clicked' button was clicked");
+    if (secondSpan.classList.contains( 'salmon-text' ))
+    {  // If the class is already there, remove it.
+      secondSpan.classList.remove( 'salmon-text' );
+    }
+    else
+    {  // If not then add it.
+      secondSpan.classList.add( 'salmon-text' );
+    }
   } );
