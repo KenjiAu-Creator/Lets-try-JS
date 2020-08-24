@@ -30,3 +30,15 @@ console.log(clickButton);
 // Lets grab the second Span
 const secondSpan = document.querySelector("p > span:nth-child(4)");
 console.log(secondSpan);
+
+/**
+ * DOM / ELEMENT Manipulation
+ */
+
+ // We can use JavaScript to cupdate / replace the content in elements.
+ myH2.textContent = "This H2 was found and updated!";
+ console.log("Outputted string into our <h2> element!");
+
+ // We are replacing the existing CSS String.
+ myH2.className = "salmon-coloured-text";
+ console.log( ' Change the H2 font color to "salmon"');

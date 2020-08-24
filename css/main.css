@@ -5,3 +5,7 @@
                             * padding / border will now be 
                             * included in width instead of addition too. */
 }
+
+.salmon-coloured-text {
+  color: salmon;
+}
