@@ -53,3 +53,15 @@ const jane = new Person(
 );
 
 console.log( jane );
+console.log( typeof (jane));
+console.log ( jane instanceof Person);
+
+const dimitri = new Person (
+  "Dimitri",
+  41,
+  [ "Painting", "Driving" ]
+);
+
+// Accessing properties is the same as always!
+console.log(dimitri);
+console.log(`My name is ${dimitri.name}. I am ${dimitri.age} years old.`);
