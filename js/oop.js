@@ -46,11 +46,40 @@ class Person {
 
   // We can create our own methods!
   // These work like functions but are INSIDE objects
-  sayHello ()
-  {
-    const helloP = document.createElement( "P" );
+  sayHello() {
+    const helloP = document.createElement("P");
     helloP.textContent = `Hello there! I am ${this.name}, nice to meet you!`;
-    document.body.appendChild( helloP );
+    document.body.appendChild(helloP);
+  }
+
+  birthday() {
+    this.age++;
+    const bDayH2 = document.createElement("H2");
+    bDayH2.textContent = `Happy Birthday ${this.name}!`;
+    document.body.appendChild(bDayH2);
+    const bDayP = document.createElement("P");
+    bDayP.textContent = `${this.name} is now ${this.age} years old!`;
+    document.body.appendChild(bDayP);
+  }
+
+  // Lets output a list of their hobbies...
+  outputHobbits() {
+    const hobbiesP = document.createElement("P");
+    hobbiesP.textContent = `${this.name}'s hobbies include:`
+    document.body.appendChild(hobbiesP);
+    // List of hobbies.
+    const hobbiesUL = document.createElement("UL");
+
+    // For of is used to look through arrays
+    // For in is used to check properties in a array
+
+    for (const hobby of this.hobbies)
+    {
+      const newLI = document.createElement( "LI" );
+      newLI.textContent = `${hobby}`;
+      hobbiesUL.appendChild( newLI );
+    }
+    document.body.appendChild(hobbiesUL);
   }
 }
 
@@ -61,16 +90,26 @@ const jane = new Person(
   ["Sewing", "Cross-country Skiing"]
 );
 
-console.log( jane );
-console.log( typeof (jane));
-console.log ( jane instanceof Person);
+console.log(jane);
+console.log(typeof (jane));
+console.log(jane instanceof Person);
 
-const dimitri = new Person (
+// Run sayHello() method for Jane
+jane.sayHello();
+
+console.log(jane.age);
+// Happy birthday jane!
+jane.birthday();
+console.log(jane.age);
+
+const dimitri = new Person(
   "Dimitri",
   41,
-  [ "Painting", "Driving" ]
+  ["Painting", "Driving"]
 );
 
 // Accessing properties is the same as always!
 console.log(dimitri);
 console.log(`My name is ${dimitri.name}. I am ${dimitri.age} years old.`);
+// What are Dimitri's hobbies?
+dimitri.outputHobbits();
