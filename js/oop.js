@@ -5,6 +5,10 @@ const myObj = {
   hobbies: [ "Movies", "Pottery" ]
 };
 
+// Convert the JS object into a string.
+// It should fill in missing "" for us.
+const myObjString = JSON.stringify( myObj );
+
 console.log( `My name is ${myObj.name}. I am ${myObj.age} years old!` );
 console.log( myObj );
 // JSON (JavaScript Object Notation)
