@@ -73,13 +73,20 @@ class Person {
     // For of is used to look through arrays
     // For in is used to check properties in a array
 
-    for (const hobby of this.hobbies)
-    {
-      const newLI = document.createElement( "LI" );
+    for (const hobby of this.hobbies) {
+      const newLI = document.createElement("LI");
       newLI.textContent = `${hobby}`;
-      hobbiesUL.appendChild( newLI );
+      hobbiesUL.appendChild(newLI);
     }
     document.body.appendChild(hobbiesUL);
+  }
+  // Lets try to add a new hobby to the hobbies properties!
+  addHobby(hobby = "") {
+    // Make sure the string is not empty!
+    if (hobby.length > 0) {
+      // Add the hobby to the end of the array
+      this.hobbies.push(hobby);
+    }
   }
 }
 
