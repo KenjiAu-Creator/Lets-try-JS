@@ -43,6 +43,15 @@ class Person {
     this.age = age;
     this.hobbies = hobbies;
   }
+
+  // We can create our own methods!
+  // These work like functions but are INSIDE objects
+  sayHello ()
+  {
+    const helloP = document.createElement( "P" );
+    helloP.textContent = `Hello there! I am ${this.name}, nice to meet you!`;
+    document.body.appendChild( helloP );
+  }
 }
 
 // Now we can make an object that FOLLOWS the blueprint.
