@@ -44,4 +44,7 @@ fetch(`http://api.open-notify.org/astros.json`)
         }
         // Add the UL to the browser!
         document.body.appendChild(peopleUL);
+    } )
+    .catch( error => {
+        console.log( error );
     });
