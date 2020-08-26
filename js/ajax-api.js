@@ -45,6 +45,7 @@ fetch(`http://api.open-notify.org/astros.json`)
         // Add the UL to the browser!
         document.body.appendChild(peopleUL);
     } )
-    .catch( error => {
+    // We can listen to the above for an error. "Catch" it in the act!
+    .catch( error => { // It is a good idea to utput it when debugging
         console.log( error );
     });
