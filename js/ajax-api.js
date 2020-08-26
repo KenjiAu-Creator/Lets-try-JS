@@ -85,3 +85,7 @@ const updateLatLong = () => {
         .catch(error => { console.log(error) });
 }
 updateLatLong(); // Runs! It updates the DOM, yay!
+
+// Add a repeating "timer" so that this function can repeat.
+// Make sure your function doesn't have braces
+setInterval( updateLatLong, 1500 );  // Repeat "updateLatLong" every 1. seconds (1500 ms)
