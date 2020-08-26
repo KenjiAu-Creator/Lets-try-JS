@@ -31,21 +31,57 @@ fetch(`http://api.open-notify.org/astros.json`)
         // The array is in the "people" property
         console.log(people); // This should be the array!
         // Lets prep some HTML for output in the browser.
-        const peopleUL = document.createElement( "UL" );
-        for (const person of people)
-        {
+        const peopleUL = document.createElement("UL");
+        for (const person of people) {
             // Set up the element
-            const personLI = document.createElement( "LI" );
+            const personLI = document.createElement("LI");
             // Fill it in with text
             personLI.textContent = `On the craft ${person.craft}, astronaut ${person.name} is present!`
             // Send it into the UL we prepped
-            peopleUL.appendChild( personLI );
+            peopleUL.appendChild(personLI);
 
         }
         // Add the UL to the browser!
         document.body.appendChild(peopleUL);
-    } )
+    })
     // We can listen to the above for an error. "Catch" it in the act!
-    .catch( error => { // It is a good idea to utput it when debugging
-        console.log( error );
+    .catch(error => { // It is a good idea to utput it when debugging
+        console.log(error);
     });
+
+/**
+ * Lets see about grabbing live data based on a timer!
+ */
+// My code below:
+// const latDD = document.getElementById("lat")
+// const longDD = document.getElementById("long")
+
+// fetch("http://api.open-notify.org/iss-now.json")
+//     .then(response => response.json())
+//     .then(data => {
+//         const shipPosition = data.iss_position;
+//         latDD.innerHTML = shipPosition.latitude;
+//         longDD.innerHTML = shipPosition.longitude;
+//     });
+
+// Classes code below:
+const latDD = document.getElementById("lat")
+const longDD = document.getElementById("long")
+const updateLatLong = () => {
+    // First things first, grab the data
+    fetch("http://api.open-notify.org/iss-now.json")
+        .then( response => {return response.json(); } )
+        .then(data => { // Check if the data came through
+            console.log ( data );
+            // Grab our latitude and longitude from the object
+            const shipPosition = data.iss_position;
+            const lat = shipPosition.latitude;
+            const long = shipPosition.longitude;
+            // Update the elements in the DOM.
+            latDD.textContent = lat;
+            longDD.textContent = long;
+        })
+        // catch the error if one comes up from requesting the API
+        .catch(error => { console.log(error) });
+}
+updateLatLong(); // Runs! It updates the DOM, yay!
